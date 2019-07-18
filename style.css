@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Stijlen boek Milena */
+html{
+    height: 100%;
+    width: 100%;
+    background-color: lightgray;
+    overflow: auto;
+}
+
+body{
+    width: 96%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    border: 1px solid;
+    overflow: inherit;
+    background-color: #fff;
+    text-align: center;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3{
+    margin: 0;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a{
+    font-size: 1.7rem;
+
+}
+
+nav ul li a:hover, 
+nav ul li a:focus
+{
+    color: #ffffff;
+}
+
+#logo{
+    float: left;
+    padding-left: 30px;
+    padding-top: -100px;
+}
