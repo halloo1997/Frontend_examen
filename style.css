@@ -7,6 +7,10 @@ html{
     overflow: auto;
 }
 
+#contact .card:hover i,#contact .card:hover h4{
+	color: #87d37c;
+}
+
 body{
     width: 96%;
     margin-top: 0;
@@ -44,8 +48,66 @@ nav ul li a:focus
     color: #ffffff;
 }
 
-#logo{
-    float: left;
-    padding-left: 30px;
-    padding-top: -100px;
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+li.nav-item{
+    padding-right: 20px;
+}
+
+.carousel.slide.my-4{
+    padding-top: 30px;
+}
+
+
+.container {
+  background: #FFFFFF;
+  width: 900px;
+  height: 650px;
+  margin: 5% auto;
+  position: relative;
+  padding-top: 80px;
+}
+.container .map {
+  width: 45%;
+  float: left;
+}
+.container .contact-form {
+  width: 53%;
+  margin-left: 2%;
+  float: left;
+}
+.container .contact-form .title {
+  font-size: 2.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #242424;
+  margin: 5% 8%;
+}
+.container .contact-form .subtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 0 4% 5% 8%;
+}
+.container .contact-form input,
+.container .contact-form textarea {
+  width: 330px;
+  padding: 3%;
+  margin: 2% 8%;
+  color: #242424;
+  border: 1px solid #B7B7B7;
+}
+.container .contact-form input::placeholder,
+.container .contact-form textarea::placeholder {
+  color: #242424;
+}
+.container .contact-form .btn-send {
+  background: #A383C9;
+  width: 180px;
+  height: 60px;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 2% 8%;
+  border: none;
 }
