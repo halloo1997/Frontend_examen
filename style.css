@@ -2,7 +2,7 @@
 /* Stijlen boek Milena */
 html{
     height: 100%;
-    width: 100%;
+/*    width: 100%;*/
     background-color: lightgray;
     overflow: auto;
 }
@@ -15,7 +15,6 @@ body{
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 5%;
     border: 1px solid;
     overflow: inherit;
     background-color: #fff;
@@ -25,6 +24,27 @@ body{
     font-size: 16px;
     font-weight: normal;
 }
+
+.navbar-toggler.toggler-example {
+cursor: pointer;
+}
+.dark-blue-text {
+color: #0A38F5;
+}
+.dark-pink-text {
+color: #AC003A;
+}
+.dark-amber-text {
+color: #ff6f00;
+}
+.dark-teal-text {
+color: #004d40;
+}
+
+nav{
+    background-color: grey;
+}
+
 
 h3{
     margin: 0;
@@ -37,8 +57,7 @@ a{
 }
 
 nav ul li a{
-    font-size: 1.7rem;
-
+    font-size: 1.4rem;
 }
 
 nav ul li a:hover, 
@@ -49,14 +68,6 @@ nav ul li a:focus
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
-}
-
-li.nav-item{
-    padding-right: 20px;
-}
-
-.carousel.slide.my-4{
-    padding-top: 30px;
 }
 
 
@@ -103,7 +114,6 @@ li.nav-item{
 .container .contact-form .btn-send {
   background: #A383C9;
   width: 180px;
-  height: 60px;
   color: #FFFFFF;
   font-weight: 700;
   margin: 2% 8%;
@@ -135,7 +145,28 @@ li.nav-item{
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: #42474b;
    color: white;
+    background-color: grey;
    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white !important;
+    float: left;
+}
+.navbar-toggler.navbar-toggler{
+    background-color: white;
+}
+
+.nav-link.waves-effect.waves-light{
+    background-color: grey !important;
+}
+
+hr{
+    width: 100%;
+    background-color: white;
+}
+
+.col-lg-16{
+    margin-top: -80px;
 }
