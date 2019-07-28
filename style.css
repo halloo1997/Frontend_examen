@@ -2,7 +2,7 @@
 /* Stijlen boek Milena */
 html{
     height: 100%;
-/*    width: 100%;*/
+    width: 100%;
     background-color: lightgray;
     overflow: auto;
 }
@@ -41,8 +41,8 @@ color: #ff6f00;
 color: #004d40;
 }
 
-nav{
-    background-color: grey;
+#nav_back{
+    background-color: gray;
 }
 
 
@@ -57,8 +57,9 @@ a{
 }
 
 nav ul li a{
-    font-size: 1.4rem;
+    font-size: 14px;
 }
+
 
 nav ul li a:hover, 
 nav ul li a:focus
@@ -150,18 +151,16 @@ nav ul li a:focus
    text-align: center;
 }
 
+
 .navbar-light .navbar-nav .nav-link{
-    color: white !important;
+    color: lightgray !important;
     float: left;
 }
 .navbar-toggler.navbar-toggler{
     background-color: white;
 }
 
-.nav-link.waves-effect.waves-light{
-    background-color: grey !important;
-}
-
+ 
 hr{
     width: 100%;
     background-color: white;
@@ -169,4 +168,30 @@ hr{
 
 .col-lg-16{
     margin-top: -80px;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.navbar .navbar-light .light-blue .lighten-4{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+
+.navbar-nav .mr-auto{
+    margin-left: 100px;
+}
+
+
+.navbar{
+    background-color: lightgray;
+}
+
+.nav-link .waves-effect .waves-light{
+    margin-left: 10px;
 }
