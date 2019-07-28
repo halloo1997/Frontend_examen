@@ -195,3 +195,7 @@ hr{
 .nav-link .waves-effect .waves-light{
     margin-left: 10px;
 }
+
+a{
+    color: gray !important;
+}
