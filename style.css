@@ -25,177 +25,60 @@ body{
     font-weight: normal;
 }
 
-.navbar-toggler.toggler-example {
-cursor: pointer;
-}
-.dark-blue-text {
-color: #0A38F5;
-}
-.dark-pink-text {
-color: #AC003A;
-}
-.dark-amber-text {
-color: #ff6f00;
-}
-.dark-teal-text {
-color: #004d40;
-}
-
-#nav_back{
-    background-color: gray;
-}
-
-
-h3{
-    margin: 0;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
 
 nav ul li a{
     font-size: 14px;
+    color: white !important;
 }
-
 
 nav ul li a:hover, 
 nav ul li a:focus
 {
-    color: #ffffff;
+    color: #58C3B9 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #98D4C0;
+        
 }
-
-.navbar-dark .navbar-nav .nav-link {
-    color: white;
-}
-
-
-.container {
-  background: #FFFFFF;
-  width: 900px;
-  height: 650px;
-  margin: 5% auto;
-  position: relative;
-}
-.container .map {
-  width: 45%;
-  float: left;
-}
-.container .contact-form {
-  width: 53%;
-  margin-left: 2%;
-  float: left;
-}
-.container .contact-form .title {
-  font-size: 2.5em;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  color: #242424;
-  margin: 5% 8%;
-}
-.container .contact-form .subtitle {
-  font-size: 1.2em;
-  font-weight: 400;
-  margin: 0 4% 5% 8%;
-}
-.container .contact-form input,
-.container .contact-form textarea {
-  width: 330px;
-  padding: 3%;
-  margin: 2% 8%;
-  color: #242424;
-  border: 1px solid #B7B7B7;
-}
-.container .contact-form input::placeholder,
-.container .contact-form textarea::placeholder {
-  color: #242424;
-}
-.container .contact-form .btn-send {
-  background: #A383C9;
-  width: 180px;
-  color: #FFFFFF;
-  font-weight: 700;
-  margin: 2% 8%;
-  border: none;
-}
-
-.footers a {color:#696969;}
-.footers p {color:#696969;}
-.footers ul {line-height:30px;}
-#social-fb:hover {
-     color: #3B5998;
-     transition:all .001s;
- }
- #social-tw:hover {
-     color: #4099FF;
-     transition:all .001s;
- }
- #social-gp:hover {
-     color: #d34836;
-     transition:all .001s;
- }
- #social-em:hover {
-     color: #f39c12;
-     transition:all .001s;
- }
 
 .footer {
-   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
    color: white;
-    background-color: grey;
+   background-color: grey;
    text-align: center;
 }
 
-
-.navbar-light .navbar-nav .nav-link{
-    color: lightgray !important;
-    float: left;
-}
-.navbar-toggler.navbar-toggler{
-    background-color: white;
+.row{
+    margin-top: 75px !important;
 }
 
- 
-hr{
-    width: 100%;
-    background-color: white;
+.title{
+    color: #58C3B9;
+}
+
+.title:hover, 
+.title:focus
+{
+    color: #98D4C0 !important;
+    text-decoration: underline !important;
+    text-decoration-color: #98D4C0;
+}
+
+.card-text{
+   color: gray;
+}
+.Naam{
+    color: #58C3B9;
+    font-size: 70px;
+    background-image: url(jimmy-musto-iOWEyl7sEgY-unsplash.jpg);
+    height: 400px;
+}
+
+h1 {
+    padding-top: 15%;
 }
 
 .col-lg-16{
-    margin-top: -80px;
-}
-
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-.navbar .navbar-light .light-blue .lighten-4{
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-right: 0px;
-}
-
-.navbar-nav .mr-auto{
-    margin-left: 100px;
-}
-
-
-.navbar{
-    background-color: lightgray;
-}
-
-.nav-link .waves-effect .waves-light{
-    margin-left: 10px;
-}
-
-a{
-    color: gray !important;
+margin-top: -100px;
 }
