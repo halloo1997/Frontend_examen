@@ -6,6 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+<script>
+//switches 'active' button based on scroll location.
+$('body').scrollspy({
+  target: '#navbar',
+  offset: 52
+});
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 
 </head>
 <body style="height:800px">
@@ -27,86 +72,42 @@
     </li>
   </ul>
 </nav>
-    
-    
-<div class="Naam">
-<h1>The Firework Treasury</h1></div>
-<div class="container-fluid">
-    
-  <div class="container">
-    <div class="row"> 
-    
-      
-      <div class="col-lg-16">
-        
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Dynasty.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Dynasty</a> </h4>
-                <p class="card-text">Wij als The Firework Treasury verkopen het vuurwerk van Dynasty. Dynasty behoort tot best kwalilteit vuurwerk.</p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9733;</small> </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Familie-Vuurwerk.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Familie vuurwerk</a> </h4>
-                <p class="card-text">Wij hebben een groot assortiment familie vuurwerk. Het vuurwerk is leuk voor klein en groot maar ook voor oud en jong. </p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Gratis-25.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Gratis vuurwerk</a> </h4>
-                <p class="card-text">Bij een bestelling vanaf €25,- krijgt u er een gratis pot vuurwerk bij. Hoe hoger het bedrag, hoe leuker de pot is.</p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Compound-Turn-Key-Project.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Cakeboxen</a> </h4>
-                <p class="card-text">Onze cakeboxen zijn de crème de la crème van ons assortiment. Als je een box koopt bij ons ben je verzekerd van de hardste knallen en de allergrootste effecten. Geen enkele cakebox is dan ook hetzelfde. </p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Voordeelvuurwerk-America.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Voordeel vuurwerk</a> </h4>
-                <p class="card-text">Omdat iedereen moet kunnen genieten van mooi vuurwerk hebben wij onze prijzen omlaag gegooid maar is het vuurwerk nog steeds prachtig, ook families die niet zoveel geld hebben kunnen dan wat afsteken.</p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100"> <a href="#"><img class="card-img-top" src="Gratis-vuurwerkbril.png" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title"> <a class="title" href="#">Gratis vuurwerkbril</a> </h4>
-                <p class="card-text">Omdat wij als The Firework Treasury veiligheid erg belangrijk vinden, krijg je bij iedere bestelling een leuke gratis vuurwerkbril.</p>
-              </div>
-              <div class="card-footer"> <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.row --> 
-        
-      </div>
-      <!-- /.col-lg-9 --> 
-      
-    </div>
-    <!-- /.row --> 
-    
-  </div>
-  <!-- /.container --> 
+
+
+<main class="container-fluid" id="main"> 
   
-</div>
-</body>
+<!-- BEGIN INTRO PAGE -->
+  <div class="container-fluid" id="aboutPage">
+    <div class="container">
+      <h1>Chariesa Roozendaal</h1>
+      <hr>
+      
+          <a class="icon" href="#"><i class="fa fa-github fa-2x"></i></a> 
+          <a class="icon" href="#"><i class="fa fa-free-code-camp fa-2x"></i></a> 
+          <a class="icon" href="#"><i class="fa fa-linkedin fa-2x"></i></a> <br>
+      
+      <p>Dit is mijn webshop voor het verkopen van vuurwerk. <br> Kijk lekker rond heb je vragen kun je altijd contact opnemen.</p>
+    </div> <!-- end heading -->
+      
+      <div class="container center">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4 col-sm-6">
+          <img src="Logo.png" width="218" height="193" alt=""/> </div>
+        <div class="col-lg-4 col-sm-6" role="text" id="contact">
+          <h3>Contact</h3>
+          <h4>Email</h4>
+          <p>chariesa@hotmail.com</p>
+          <h4>Telefoon nummer</h4>
+          <p>06-33028923</p>
+        </div>
+          </div>
+      </div>
+      </div> <!-- end row -->
+    </div>
+      </main>
+    
+    
 <div class="footer">Copyright © 2019 The firework treasury - Alle rechten voorbehouden</div>
+    </body>
 </html>

@@ -41,8 +41,8 @@ nav ul li a:focus
 }
 
 .footer {
-   left: 0;
-   bottom: 0;
+   margin-left: 0;
+   margin-bottom: 0;
    width: 100%;
    color: white;
    background-color: grey;
@@ -70,9 +70,10 @@ nav ul li a:focus
 }
 .Naam{
     color: #58C3B9;
-    font-size: 70px;
+    font-size: 1.5rem;
     background-image: url(jimmy-musto-iOWEyl7sEgY-unsplash.jpg);
-    height: 400px;
+    height: 40%;
+    width: 100%;
 }
 
 h1 {
@@ -82,3 +83,164 @@ h1 {
 .col-lg-16{
 margin-top: -100px;
 }
+
+body{
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
+  padding: 0;
+}
+nav{
+  background-color:#fff;
+  border-bottom: .13em solid #67809F;
+  font-weight: bold;
+  box-shadow: 0 0 .3em #333;
+}
+h1{
+  font-family: "ubuntu", sans-serif;
+  font-size: 2em;
+}
+h2{
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.8em;
+}
+h3{
+  font-family: "ubuntu", sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+h4{
+  font-size: 1em;
+  font-weight: bold;
+}
+a{
+  color: #444;
+}
+i{
+  padding: .3em;
+}
+
+.proj{
+  padding: 1em 0em;
+  max-width: 100%;
+}
+.form-control{
+  margin: .2em;
+}
+#main{
+  text-align: center;
+  padding: 0;
+}
+#aboutPage, #projectPage, #contactPage{
+  margin: 0;
+  padding-top: 5em;
+  padding-bottom: 0em;
+  position: relative;
+  min-height: 95vh;
+}
+#projectPage {
+  background-color: #67809F;
+}
+#grid{
+  padding: 0 4.5em;
+  max-width: 70em;
+}
+#contactForm{
+  max-width: 50em;
+  padding: 1em 3em;
+  border: .13em solid #67809F;
+  text-align: left;
+  font-weight: bold;
+  font-size: .9em;
+}
+#submit {
+  padding: 0;
+}
+#credits{
+  background-color: #67809F;
+  padding: .2em;
+  font-size: .8em;
+  font-weight: bold;
+  text-align: center;
+}
+*[role="downPage"], *[role="upPage"] {
+  width: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: absolute;
+  bottom: 0;
+}
+*[role="text"]{
+  text-align: left;
+}
+
+/* Link Animations *
+*******************/
+.active {
+  background-color:#c0d9f8;
+}
+/*.navbar-toggler:hover, .nav > li > a:hover{
+   background-color: #c0d9f8; 
+}*/
+a.icon:link, a.icon:visited{
+  padding: .75em .5em .25em .5em;
+  color: #67809F;
+}
+a.icon:hover{
+  padding: .75em .5em .25em .5em;
+  color: #333;
+  background-color: #c0d9f8;
+}
+img.proj {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+img.proj:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+ 
+}
+.btn-secondary:hover{
+  background-color:#c0d9f8;
+}
+
+/* Flexible Design- adjustments for screen sizes *
+**************************************************/
+@media (max-width: 768px) {
+  /* Shrinks font automatically for smaller screens, make sure all fonts are sized in em units.*/
+  body{
+    font-size: 80%;
+  }
+  /* This code gets rid of the bottom page arrows on very small screens, because they aren't as neat when they aren't properly sitting at the bottom of the screen. */
+  *[role="downPage"] {
+    display: none;
+  } 
+}
+@media (max-width: 576px){
+  #contact{
+    text-align: center;
+  }
+  small{
+    display: none;
+  }
+    h1 {
+    padding-top: 30%;
+}
+}
+/* Increases font sizes on xxl screens (full screen hi-def desktops & larger) */
+@media (min-width: 1920px) {
+  body{
+    font-size: 120%;
+  }
+    h1 {
+    padding-top: 20%;
+}
+}
+
+body { font-family: "Helvetica", sans-serif;}
+
+.product-container{ display: inline-block; margin: 10px; text-align: center; border: 1px solid #e4e4e4; padding: 10px; background-color: #f4f4f4; width: 250px; }
+
+.product-image { width: 150px;  height: 150px; display: inline-block; border: 1px solid #E4E4E4; border-radius: 5px; }
+.product-image img { width: 100%; }
+
+.shopping-basket { background-color: #333; color: #FFF; padding: 10px;}
