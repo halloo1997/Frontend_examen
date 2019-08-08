@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<title>Boek Milena</title>
+<title>Examen Front-end</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -70,7 +70,7 @@ function addToCart(){
     document.getElementById('shoppingBasketMessage').innerHTML = cartMessage;       
 }</script>
 </head>
-<body style="height:800px">
+<body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <a class="navbar-brand" href="index.html"><img src="Logo.png" width="90" height="85" alt=""/></a>
@@ -89,25 +89,164 @@ function addToCart(){
     </li>
   </ul>
 </nav>
+    <div class="Naam">
+<h1>The Firework Treasury Winkel</h1>
+    </div>
+    <div class="container3">
+  <nav class="navbar navbar-expand-sm bg-dark fixed-top a">
+  <ul class="navbar-nav test">
+    <li class="nav-item1 ">
+      <a class="nav-link" href="index.html"><p>Home</p></a>
+    </li>
+    <li class="nav-item1">
+      <a class="nav-link" href="winkel.html"><p>Winkel</p></a>
+    </li>
+      <li class="nav-item1">
+      <a class="nav-link" href="over.html"><p>Over</p></a>
+    </li>
+      <li class="nav-item1">
+      <a class="nav-link " href="contact.html"><p>Contact</p></a>
+    </li>
+  </ul>
+</nav>
+</div>
     
-<div class="product-container">
+    
+ <div id="myBtnContainer">
+     <button class="btn active" onclick="filterSelection('all')">Show all </button>
+    <button class="btn" onclick="filterSelection('cars')">1 Shots Mortier</button>
+    <button class="btn" onclick="filterSelection('cakebox')">Cakebox</button>
+    <button class="btn" onclick="filterSelection('compound')">Compound</button>
+    <button class="btn" 
+    onclick="filterSelection('fontein')">Fontein</button>
+     <button class="btn" onclick="filterSelection('fonteinsierpot')">Fontein-Sierpot</button>
+     <button class="btn" onclick="filterSelection('kaarsen')">Kaarsen</button>
+     <button class="btn" onclick="filterSelection('kindervuurwerk')">Kindervuurwerk</button>
+     <button class="btn" onclick="filterSelection('kleinknalvuurwerk')">Klein Knalvuurwerk</button>
+     <button class="btn" onclick="filterSelection('kliensiervuurwerk')">Klein Siervuurwerk</button>
+     <button class="btn" onclick="filterSelection('knalpakket')">Knalpakket</button>
+     <button class="btn" onclick="filterSelection('knalpot')">Knalpot</button>
+     <button class="btn" onclick="filterSelection('mattenenrollen')">Matten en Rollen</button>
+     <button class="btn" onclick="filterSelection('overige')">Overige</button>
+     <button class="btn" onclick="filterSelection('sierpakket')">Sierpakket</button>
+     <button class="btn" onclick="filterSelection('sierpot')">Sierpot</button>
+     <button class="btn" onclick="filterSelection('veiligheid')">Veiligheid</button>
+     <button class="btn" onclick="filterSelection('vuurpijlen')">Vuurpijlen</button>
+     </div>  
+    
+    <div class="container">
+        <div class="filterDiv sierpot"><div class="product-container">
   <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
   <p>Price: $5.00</p>
   <p>Apples are picked daily!</p>
-  <button class="add-to-cart" data-product-name="Apple">Add Apple To Cart</button>
-</div>
-
-<div class="product-container">
-  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/orange-product-photo.jpg"></a>
-  <p>Price: $3.00</p>
-  <p>This is a very delicous orange!</p>
-  <button class="add-to-cart" data-product-name="Orange">Add Orange To Cart</button>
-</div>
-  
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv fruits"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+        <div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div><div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div><div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div><div class="filterDiv sierpot"><div class="product-container">
+  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+  <p>Price: $5.00</p>
+  <p>Apples are picked daily!</p>
+  <button>In winkelwagen</button>
+</div></div>
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++){
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+    
+    function w3AddClass(element,name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[1])== -1)
+                {element.className += " " + arr2[i];}
+        }
+    }   
+        
+    function w3RemoveClass(element, name)
+        {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1)
+                    {
+            arr1.splice(arr1.indexOf(arr2[i]),1);
+            }
+        }
+            element.className = arr1.join(" ");
+        }
+        
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (vari = 0; i < btns.length; i++)
+            {
+                btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace("active", "");
+                    this.className += " active";
+                });
+            }
+    </script>
+    
 <br>
 <br>
 <br>
 <div class="shopping-basket">Your Shopping Basket<span id="shoppingBasketMessage"> is empty</span>.</div>
+
 </body>
 <div class="footer">Copyright © 2019 The firework treasury - Alle rechten voorbehouden</div>
 </html>
