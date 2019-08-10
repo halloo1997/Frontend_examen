@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<title>Boek Milena</title>
+<title>Contact - The Firework Treasury</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
   <link rel="stylesheet" href="style.css">
-<script>
-//switches 'active' button based on scroll location.
-$('body').scrollspy({
-  target: '#navbar',
-  offset: 52
-});
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+  <!-- Javascript -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.3.1.js"></script>
+
+    <!-- SEO -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Contact - The Firework Treasury">
+  <meta property="og:url" content="https://www.thefireworktreasury.nl/contact.html">
+  <meta property="og:site_name" content="The Firework Treasury">
+<script>
+// //switches 'active' button based on scroll location.
+// $('body').scrollspy({
+//   target: '#navbar',
+//   offset: 52
+// });
+
+// // jQuery for page scrolling feature - requires jQuery Easing plugin
+// // Select all links with hashes
+// $('a[href*="#"]')
+//   // Remove links that don't actually link to anything
+//   .not('[href="#"]')
+//   .not('[href="#0"]')
+//   .click(function(event) {
+//     // On-page links
+//     if (
+//       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+//       && 
+//       location.hostname == this.hostname
+//     ) {
+//       // Figure out element to scroll to
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//       // Does a scroll target exist?
+//       if (target.length) {
+//         // Only prevent default if animation is actually gonna happen
+//         event.preventDefault();
+//         $('html, body').animate({
+//           scrollTop: target.offset().top
+//         }, 1000, function() {
+//           // Callback after animation
+//           // Must change focus!
+//           var $target = $(target);
+//           $target.focus();
+//           if ($target.is(":focus")) { // Checking if the target was focused
+//             return false;
+//           } else {
+//             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+//             $target.focus(); // Set focus again
+//           };
+//         });
+//       }
+//     }
+//   });
 </script>
 
 </head>
-<body style="height:800px">
+<body>
 
+<!-- Navigatie -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="index.html"><img src="Logo.png" width="90" height="85" alt=""/></a>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="winkel.html">Winkel</a>
-    </li>
+  <a class="navbar-brand" href="index.html"><img src="Logo.png" width="60" height="60" alt=""/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-      <a class="nav-link" href="over.html">Over</a>
-    </li>
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
       <li class="nav-item">
-      <a class="nav-link" href="contact.html">Contact</a>
-    </li>
-  </ul>
+        <a class="nav-link" href="winkel.html">Winkel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="over.html">Over</a>
+      </li>
+      <li class="nav-item active-nav-item">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
+      <button class="btn btn-outline-header my-2 my-sm-0" type="submit">Zoeken</button>
+    </form>
+  </div>
 </nav>
 
 
@@ -79,7 +104,7 @@ $('a[href*="#"]')
 <!-- BEGIN INTRO PAGE -->
   <div class="container-fluid" id="aboutPage">
     <div class="container">
-      <h1>Chariesa Roozendaal</h1>
+      <h1 class="h1-offset">Chariesa Roozendaal</h1>
       <hr>
       
           <a class="icon" href="#"><i class="fa fa-github fa-2x"></i></a> 

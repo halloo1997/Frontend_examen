@@ -37,7 +37,19 @@ nav ul li a:focus
     color: #58C3B9 !important;
     text-decoration: underline !important;
     text-decoration-color: #98D4C0;
-        
+}
+
+.active-nav-item *{
+  color: #98D4C0 !important;
+}
+
+.btn-outline-header {
+    color: #58C3B9;
+    border-color: #58C3B9;
+}
+
+.btn-outline-header:hover {
+    background-color: #58C3B9;
 }
 
 .footer {
@@ -68,16 +80,21 @@ nav ul li a:focus
 .card-text{
    color: gray;
 }
+
 .Naam{
     color: #58C3B9;
     font-size: 1.5rem;
     background-image: url(jimmy-musto-iOWEyl7sEgY-unsplash.jpg);
-    height: 40%;
+    height: 300px;
     width: 100%;
 }
 
-h1 {
-    padding-top: 15%;
+.Naam h1 {
+    padding-top: 200px;
+}
+
+.h1-offset {
+  margin-top: 120px;
 }
 
 .col-lg-16{
