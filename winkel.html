@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<title>Examen Front-end</title>
+<title>Winkel - The Firework Treasury</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+    <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Javascript -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.3.1.js"></script>
+
+  <!-- SEO -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:type" content="object">
+  <meta property="og:title" content="Winkel - The Firework Treasury">
+  <meta property="og:url" content="https://www.thefireworktreasury.nl/winkel.html">
+  <meta property="og:site_name" content="The Firework Treasury">
+
 <script>
     // An array of objects to hold our products
 var shoppingCart = [];
@@ -72,44 +87,37 @@ function addToCart(){
 </head>
 <body>
 
+<!-- Navigatie -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="index.html"><img src="Logo.png" width="90" height="85" alt=""/></a>
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="winkel.html">Winkel</a>
-    </li>
+  <a class="navbar-brand" href="index.html"><img src="Logo.png" width="60" height="60" alt=""/></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active-nav-item">
+        <a class="nav-link" href="winkel.html">Winkel</a>
+      </li>
       <li class="nav-item">
-      <a class="nav-link" href="over.html">Over</a>
-    </li>
-      <li class="nav-item">
-      <a class="nav-link" href="contact.html">Contact</a>
-    </li>
-  </ul>
+        <a class="nav-link" href="over.html">Over</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
+      <button class="btn btn-outline-header my-2 my-sm-0" type="submit">Zoeken</button>
+    </form>
+  </div>
 </nav>
     <div class="Naam">
-<h1>The Firework Treasury Winkel</h1>
-    </div>
-    <div class="container3">
-  <nav class="navbar navbar-expand-sm bg-dark fixed-top a">
-  <ul class="navbar-nav test">
-    <li class="nav-item1 ">
-      <a class="nav-link" href="index.html"><p>Home</p></a>
-    </li>
-    <li class="nav-item1">
-      <a class="nav-link" href="winkel.html"><p>Winkel</p></a>
-    </li>
-      <li class="nav-item1">
-      <a class="nav-link" href="over.html"><p>Over</p></a>
-    </li>
-      <li class="nav-item1">
-      <a class="nav-link " href="contact.html"><p>Contact</p></a>
-    </li>
-  </ul>
-</nav>
-</div>
+  <h1>The Firework Treasury Winkel</h1></div>
+    <br>
     
     
  <div id="myBtnContainer">
