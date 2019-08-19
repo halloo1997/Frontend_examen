@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-<<<<<<< HEAD
     <title>Winkel - The Firework Treasury</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +34,7 @@
         productPrices["Orange"] = 3;
 
         // A functiont that turns a number into a currency format
-        function getCurrency(value) {
+        function getCurrency(value){
             return value = '$' + value.toFixed(2);
         }
 
@@ -49,28 +47,24 @@
         }
 
         // Function to add the product to the cart
-        function addToCart() {
+        function addToCart(){
             var productName = this.getAttribute('data-product-name');
 
             // Loops through the shoppingCart array and sees if the product exists
             var productInCart = false;
-            for (var i = 0; i < shoppingCart.length; i++) {
+            for(var i = 0; i < shoppingCart.length; i++) {
                 if (shoppingCart[i].name == productName) {
                     // Lets us know that this item exists
                     productInCart = true;
                     // Adds an item to the cart
-                    shoppingCart[i].quantity++;
+                    shoppingCart[i].quantity ++;
                     break;
                 }
             }
 
             // If the item does not exist in the cart already, we add it here
-            if (!productInCart) {
-                shoppingCart.push({
-                    name: productName,
-                    quantity: 1,
-                    price: 5
-                });
+            if(!productInCart){
+                shoppingCart.push({name: productName, quantity: 1, price: 5});
             }
 
             // Adds the price of the product to totalPrice
@@ -79,8 +73,8 @@
             var cartMessage = "";
 
             // Adds all of the products to the shopping cart message
-            for (i = 0; i < shoppingCart.length; i++) {
-                if (i > 0) cartMessage += ' and';
+            for(i = 0; i < shoppingCart.length; i++){
+                if(i > 0) cartMessage += ' and';
                 cartMessage += ` has ${shoppingCart[i].quantity} ${shoppingCart[i].name}(s) `;
             }
 
@@ -89,629 +83,473 @@
 
             // Writes the cart message to the screen
             document.getElementById('shoppingBasketMessage').innerHTML = cartMessage;
-=======
-<title>Winkel - The Firework Treasury</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-    <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap-4.3.1.css">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Javascript -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.3.1.js"></script>
-
-  <!-- SEO -->
-  <meta property="og:locale" content="nl_NL">
-  <meta property="og:type" content="object">
-  <meta property="og:title" content="Winkel - The Firework Treasury">
-  <meta property="og:url" content="https://www.thefireworktreasury.nl/winkel.html">
-  <meta property="og:site_name" content="The Firework Treasury">
-
-<script>
-    // An array of objects to hold our products
-var shoppingCart = [];
-
-// The total price of all products in our shopping cart
-var totalPrice = 0;
-
-// The array that holds the pricing for our products
-var productPrices = [];
-    productPrices["Apple"] = 5;
-    productPrices["Orange"] = 3;  
-
-// A functiont that turns a number into a currency format
-function getCurrency(value){
-  return value = '$' + value.toFixed(2);
-}
-
-// Gets all elements with a class of product-image
-var productListeners = document.getElementsByClassName("add-to-cart");
-
-// Loop through the elements with a class of product-image and add a click event listener
-for (var i = 0; i < productListeners.length; i++) {        
-    productListeners[i].addEventListener('click', addToCart, false);
-}
-
-// Function to add the product to the cart
-function addToCart(){    
-    var productName = this.getAttribute('data-product-name');
-  
-    // Loops through the shoppingCart array and sees if the product exists
-    var productInCart = false;
-    for(var i = 0; i < shoppingCart.length; i++) {
-        if (shoppingCart[i].name == productName) {
-            // Lets us know that this item exists
-            productInCart = true;
-            // Adds an item to the cart
-            shoppingCart[i].quantity ++;            
-            break;
->>>>>>> origin/master
-        }
-
-    </script>
+        }</script>
 </head>
-<<<<<<< HEAD
-
-<body>
-
-    <!-- Navigatie -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <a class="navbar-brand" href="index.html"><img src="Logo.png" width="60" height="60" alt="" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item active-nav-item">
-                    <a class="nav-link" href="winkel.html">Winkel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="over.html">Over</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
-                <button class="btn btn-outline-header my-2 my-sm-0" type="submit">Zoeken</button>
-            </form>
-        </div>
-    </nav>
-    <div class="Naam">
-        <h1>The Firework Treasury Winkel</h1>
-    </div>
-    <br>
-
-
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')">Show all </button>
-        <button class="btn" onclick="filterSelection('sierpot')">Sierpot</button>
-        <button class="btn" onclick="filterSelection('sierpakket')">Sierpakket</button>
-        <button class="btn" onclick="filterSelection('compound')">Compound</button>
-        <button class="btn" onclick="filterSelection('fonteinenkaarsen')">Fonteinen & Kaarsen</button>
-        <button class="btn" onclick="filterSelection('grondvuurwerk')">Grondvuurwerk</button>
-        <button class="btn" onclick="filterSelection('knalvuurwerk')">Knalvuurwerk</button>
-        <button class="btn" onclick="filterSelection('pakketten')">Pakketten</button>
-        <button class="btn" onclick="filterSelection('singleshots')">Single shots</button>
-        <button class="btn" onclick="filterSelection('vuurpijlen')">Vuurpijlen</button>
-    </div>
-
-    <div class="container">
-        <!--OREGAN-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>OREGAN</p>
-                <p>Prijs: € 6,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--JOKER-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>THE JOKER</p>
-                <p>Prijs: € 29,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FULL HOUSE-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FULL HOUSE</p>
-                <p>Prijs: € 9,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE TRIP-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE TRIP</p>
-                <p>Prijs: € 17,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--KNOCKDOWN-->
-        <div class="filterDiv compound">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>KNOCK DOWN</p>
-                <p>Prijs: € 89,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--SUPER SCREAMER!-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>SUPER SCREAMER!</p>
-                <p>Prijs: € 7,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--HAPPY SCREAMER!-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>HAPPY SCREAMER</p>
-                <p>Prijs: € 14,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--ULTIMATE SCREAMER!-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>ULTIMATE SCREAMER</p>
-                <p>Prijs: € 39,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--THUNDER PEPPER-->
-        <div class="filterDiv kleinknalvuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>THUNDER PEPPER</p>
-                <p>Prijs: € 4,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--DEFENDER BIG BOX-->
-        <div class="filterDiv 1shotsmortier">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>DEFENDER BIG BOX</p>
-                <p>Prijs: € 19,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--VOLCANO-->
-        <div class="filterDiv fontein">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>VOLCANO</p>
-                <p>Prijs: € 8,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--MAD RIOT-->
-        <div class="filterDiv fontein">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>MAD RIOT</p>
-                <p>Prijs: € 4,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--DRAGONFLY-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>DRAGONFLY</p>
-                <p>Prijs: € 2,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--MI FLAI HAAI-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>MI FLAI HAAI</p>
-                <p>Prijs: € 2,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--JUMPING JACK-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>JUMPING JACK</p>
-                <p>Prijs: € 1,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--CRACKLING GROUND FLOWERS-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>CRACKLING GROUND FLOWERS</p>
-                <p>Prijs: € 3,70</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BURNING ATTACK-->
-        <div class="filterDiv kleinknalvuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>BURNING ATTACK</p>
-                <p>Prijs: € 14,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BURNING STRING 90-->
-        <div class="filterDiv mattenenrollen">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>BURNING STRING 90</p>
-                <p>Prijs: € 1,20</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BURNING STRING 500-->
-        <div class="filterDiv mattenenrollen">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>BURNING SHOTS 500</p>
-                <p>Prijs: € 6,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--WOLFF CRACKER-->
-        <div class="filterDiv kleinknalvuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>WOLFF CRACKER</p>
-                <p>Prijs: € 3,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BURNING KING-->
-        <div class="filterDiv knalpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>BURNING KING</p>
-                <p>Prijs: € 9,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BIG FAMILY PACK-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>BIG FAMILY PACK</p>
-                <p>Prijs: € 37,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--CITY LIGHTS-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>CITY LIGHTS</p>
-                <p>Prijs: € 27,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--HEROES ON FIRE 1-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>HEROES ON FIRE 1</p>
-                <p>Prijs: € 21,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--HEROES ON FIRE 3-->
-        <div class="filterDiv sierpakket">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>HEROES ON FIRE 3</p>
-                <p>Prijs: € 32,50</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--MAGIC STARS-->
-        <div class="filterDiv kindervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>MAGIC STARS</p>
-                <p>Prijs: € 1,60</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--STERRETJES GROOT-->
-        <div class="filterDiv kindervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>STERRETJES GROOT</p>
-                <p>Prijs: € 2,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--DISCO DREAM-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>DISCO DREAM</p>
-                <p>Prijs: € 4,90</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--BEMBEM!-->
-        <div class="filterDiv kindervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>THUNDER PEPPER</p>
-                <p>Prijs: € 2,70</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--CRACKLING GRENADE-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>CRACKLING GRENADE</p>
-                <p>Prijs: € 4,90</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--CRY OUT LOUD-->
-        <div class="filterDiv kleinsiervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>CRY OUT LOUD</p>
-                <p>Prijs: € 1,10</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--HAPPINESS-->
-        <div class="filterDiv fontein">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>HAPPINESS</p>
-                <p>Prijs: € 3,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--REBEL PACK-->
-        <div class="filterDiv kindervuurwerk">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>REBEL PACK</p>
-                <p>Prijs: € 8,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE TOPPER-->
-        <div class="filterDiv compound">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE TOPPER</p>
-                <p>Prijs: € 74,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE SPECIAL-->
-        <div class="filterDiv compound">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE SPECIAL</p>
-                <p>Prijs: € 54,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE SHOW-->
-        <div class="filterDiv compound">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE SHOW</p>
-                <p>Prijs: € 59,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE CONCERT-->
-        <div class="filterDiv fontein sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE CONCERT</p>
-                <p>Prijs: € 14,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE MAGIE-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE MAGIE</p>
-                <p>Prijs: € 12,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE SURPRISE-->
-        <div class="filterDiv fontein sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE SURPRISE</p>
-                <p>Prijs: € 4,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-        <!--FAMILIE FUN-->
-        <div class="filterDiv sierpot">
-            <div class="product-container">
-                <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-                <p>FAMILIE FUN</p>
-                <p>Prijs: € 14,95</p>
-                <button>In winkelwagen</button>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        filterSelection("all")
-
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("filterDiv");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-            }
-        }
-
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                if (arr1.indexOf(arr2[1]) == -1) {
-                    element.className += " " + arr2[i];
-                }
-            }
-        }
-
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-                while (arr1.indexOf(arr2[i]) > -1) {
-                    arr1.splice(arr1.indexOf(arr2[i]), 1);
-                }
-            }
-            element.className = arr1.join(" ");
-        }
-
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (vari = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function() {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace("active", "");
-                this.className += " active";
-            });
-        }
-
-    </script>
-
-    <br>
-    <br>
-    <br>
-    <div class="shopping-basket">Your Shopping Basket<span id="shoppingBasketMessage"> is empty</span>.</div>
-
-=======
 <body>
 
 <!-- Navigatie -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="index.html"><img src="Logo.png" width="60" height="60" alt=""/></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <a class="navbar-brand" href="index.html"><img src="Logo.png" width="60" height="60" alt=""/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item active-nav-item">
-        <a class="nav-link" href="winkel.html">Winkel</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="over.html">Over</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
-      <button class="btn btn-outline-header my-2 my-sm-0" type="submit">Zoeken</button>
-    </form>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active-nav-item">
+                <a class="nav-link" href="winkel.html">Winkel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="over.html">Over</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Zoeken" aria-label="Zoeken">
+            <button class="btn btn-outline-header my-2 my-sm-0" type="submit">Zoeken</button>
+        </form>
+    </div>
 </nav>
-    
-<div class="product-container">
-  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
-  <p>Price: $5.00</p>
-  <p>Apples are picked daily!</p>
-  <button class="add-to-cart" data-product-name="Apple">Add Apple To Cart</button>
+<div class="Naam">
+    <h1>The Firework Treasury Winkel</h1></div>
+<br>
+
+
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')">Show all </button>
+    <button class="btn" onclick="filterSelection('sierpot')">Sierpot</button>
+    <button class="btn" onclick="filterSelection('sierpakket')">Sierpakket</button>
+    <button class="btn" onclick="filterSelection('compound')">Compound</button>
+    <button class="btn"
+            onclick="filterSelection('fonteinenkaarsen')">Fonteinen & Kaarsen</button>
+    <button class="btn" onclick="filterSelection('grondvuurwerk')">Grondvuurwerk</button>
+    <button class="btn" onclick="filterSelection('knalvuurwerk')">Knalvuurwerk</button>
+    <button class="btn" onclick="filterSelection('pakketten')">Pakketten</button>
+    <button class="btn" onclick="filterSelection('singleshots')">Single shots</button>
+    <button class="btn" onclick="filterSelection('vuurpijlen')">Vuurpijlen</button>
 </div>
 
-<div class="product-container">
-  <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/orange-product-photo.jpg"></a>
-  <p>Price: $3.00</p>
-  <p>This is a very delicous orange!</p>
-  <button class="add-to-cart" data-product-name="Orange">Add Orange To Cart</button>
+<div class="container">
+    <!--OREGAN-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>OREGAN</p>
+        <p>Prijs: € 6,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--JOKER-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>THE JOKER</p>
+        <p>Prijs: € 29,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FULL HOUSE-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FULL HOUSE</p>
+        <p>Prijs: € 9,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE TRIP-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE TRIP</p>
+        <p>Prijs: € 17,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--KNOCKDOWN-->
+    <div class="filterDiv compound"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>KNOCK DOWN</p>
+        <p>Prijs: € 89,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--SUPER SCREAMER!-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>SUPER SCREAMER!</p>
+        <p>Prijs: € 7,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--HAPPY SCREAMER!-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>HAPPY SCREAMER</p>
+        <p>Prijs: € 14,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--ULTIMATE SCREAMER!-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>ULTIMATE SCREAMER</p>
+        <p>Prijs: € 39,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--THUNDER PEPPER-->
+    <div class="filterDiv kleinknalvuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>THUNDER PEPPER</p>
+        <p>Prijs: € 4,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--DEFENDER BIG BOX-->
+    <div class="filterDiv 1shotsmortier"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>DEFENDER BIG BOX</p>
+        <p>Prijs: € 19,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--VOLCANO-->
+    <div class="filterDiv fontein"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>VOLCANO</p>
+        <p>Prijs: € 8,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--MAD RIOT-->
+    <div class="filterDiv fontein"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>MAD RIOT</p>
+        <p>Prijs: € 4,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--DRAGONFLY-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>DRAGONFLY</p>
+        <p>Prijs: € 2,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--MI FLAI HAAI-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>MI FLAI HAAI</p>
+        <p>Prijs: € 2,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--JUMPING JACK-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>JUMPING JACK</p>
+        <p>Prijs: € 1,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--CRACKLING GROUND FLOWERS-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>CRACKLING GROUND FLOWERS</p>
+        <p>Prijs: € 3,70</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BURNING ATTACK-->
+    <div class="filterDiv kleinknalvuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>BURNING ATTACK</p>
+        <p>Prijs: € 14,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BURNING STRING 90-->
+    <div class="filterDiv mattenenrollen"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>BURNING STRING 90</p>
+        <p>Prijs: € 1,20</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BURNING STRING 500-->
+    <div class="filterDiv mattenenrollen"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>BURNING SHOTS 500</p>
+        <p>Prijs: € 6,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--WOLFF CRACKER-->
+    <div class="filterDiv kleinknalvuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>WOLFF CRACKER</p>
+        <p>Prijs: € 3,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BURNING KING-->
+    <div class="filterDiv knalpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>BURNING KING</p>
+        <p>Prijs: € 9,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BIG FAMILY PACK-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>BIG FAMILY PACK</p>
+        <p>Prijs: € 37,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--CITY LIGHTS-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>CITY LIGHTS</p>
+        <p>Prijs: € 27,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--HEROES ON FIRE 1-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>HEROES ON FIRE 1</p>
+        <p>Prijs: € 21,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--HEROES ON FIRE 3-->
+    <div class="filterDiv sierpakket"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>HEROES ON FIRE 3</p>
+        <p>Prijs: € 32,50</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--MAGIC STARS-->
+    <div class="filterDiv kindervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>MAGIC STARS</p>
+        <p>Prijs: € 1,60</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--STERRETJES GROOT-->
+    <div class="filterDiv kindervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>STERRETJES GROOT</p>
+        <p>Prijs: € 2,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--DISCO DREAM-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>DISCO DREAM</p>
+        <p>Prijs: € 4,90</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--BEMBEM!-->
+    <div class="filterDiv kindervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>THUNDER PEPPER</p>
+        <p>Prijs: € 2,70</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--CRACKLING GRENADE-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>CRACKLING GRENADE</p>
+        <p>Prijs: € 4,90</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--CRY OUT LOUD-->
+    <div class="filterDiv kleinsiervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>CRY OUT LOUD</p>
+        <p>Prijs: € 1,10</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--HAPPINESS-->
+    <div class="filterDiv fontein"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>HAPPINESS</p>
+        <p>Prijs: € 3,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--REBEL PACK-->
+    <div class="filterDiv kindervuurwerk"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>REBEL PACK</p>
+        <p>Prijs: € 8,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE TOPPER-->
+    <div class="filterDiv compound"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE TOPPER</p>
+        <p>Prijs: € 74,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE SPECIAL-->
+    <div class="filterDiv compound"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE SPECIAL</p>
+        <p>Prijs: € 54,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE SHOW-->
+    <div class="filterDiv compound"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE SHOW</p>
+        <p>Prijs: € 59,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE CONCERT-->
+    <div class="filterDiv fontein sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE CONCERT</p>
+        <p>Prijs: € 14,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE MAGIE-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE MAGIE</p>
+        <p>Prijs: € 12,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE SURPRISE-->
+    <div class="filterDiv fontein sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE SURPRISE</p>
+        <p>Prijs: € 4,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
+    <!--FAMILIE FUN-->
+    <div class="filterDiv sierpot"><div class="product-container">
+        <a href="#" class="product-image"><img src="https://justudios.com/codepen/ecommerce-js/apple-product-photo.jpg"></a>
+        <p>FAMILIE FUN</p>
+        <p>Prijs: € 14,95</p>
+        <button>In winkelwagen</button>
+    </div>
+    </div>
+
 </div>
-  
+
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++){
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+    }
+
+    function w3AddClass(element,name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[1])== -1)
+            {element.className += " " + arr2[i];}
+        }
+    }
+
+    function w3RemoveClass(element, name)
+    {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1)
+            {
+                arr1.splice(arr1.indexOf(arr2[i]),1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (vari = 0; i < btns.length; i++)
+    {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += " active";
+        });
+    }
+</script>
+
 <br>
 <br>
 <br>
 <div class="shopping-basket">Your Shopping Basket<span id="shoppingBasketMessage"> is empty</span>.</div>
->>>>>>> origin/master
+
 </body>
 <div class="footer">Copyright © 2019 The firework treasury - Alle rechten voorbehouden</div>
-
 </html>
