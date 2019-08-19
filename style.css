@@ -40,8 +40,13 @@ nav ul li a:focus {
     text-decoration-color: #98D4C0;
 }
 
+<<<<<<< HEAD
 .active-nav-item * {
     color: #98D4C0 !important;
+=======
+.active-nav-item *{
+  color: #98D4C0 !important;
+>>>>>>> origin/master
 }
 
 .btn-outline-header {
@@ -81,7 +86,11 @@ nav ul li a:focus {
     color: gray;
 }
 
+<<<<<<< HEAD
 .Naam {
+=======
+.Naam{
+>>>>>>> origin/master
     color: #58C3B9;
     font-size: 1.5rem;
     background-image: url(jimmy-musto-iOWEyl7sEgY-unsplash.jpg);
@@ -90,7 +99,15 @@ nav ul li a:focus {
 }
 
 .Naam h1 {
+<<<<<<< HEAD
     padding-top: 180px;
+=======
+    padding-top: 200px;
+}
+
+.h1-offset {
+  margin-top: 120px;
+>>>>>>> origin/master
 }
 
 .h1-offset {
