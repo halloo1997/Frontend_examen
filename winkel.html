@@ -123,7 +123,7 @@
 <div id="myBtnContainer">
     <button class="btn active" onclick="filterSelection('all')">Show all </button>
     <button class="btn" onclick="filterSelection('1shotsmortier')">1 Schots Mortier</button>
-    <button class="btn" onclick="filterSelection('compound')">Compound</button>
+    <button class="btn" onclick="('compound')">Compound</button>
     <button class="btn"
             onclick="filterSelection('fontein')">Fontein</button>
     <button class="btn" onclick="filterSelection('kleinknalvuurwerk')">Klein Knalvuurwerk</button>
@@ -135,13 +135,41 @@
 </div>
 
 <div class="container">
+  <div class="wrapper">
+    <fieldset class="filter-price">
+
+      <div class="price-field">
+        <input type="range" min="100" max="500" value="135" id="lower">
+        <input type="range" min="100" max="500" value="500" id="upper">
+      </div>
+      <div class="price-wrap">
+        <span class="price-title">FILTER</span>
+        <div class="price-container">
+          <div class="price-wrap-1">
+
+            <label for="one">€</label>
+            <input id="one">
+          </div>
+          <div class="price-wrap_line">-</div>
+          <div class="price-wrap-2">
+            <label for="two">€</label>
+            <input id="two">
+
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+<div class="container">
     <!--OREGAN-->
     <div class="filterDiv sierpot"><div class="product-container">
         <a href="productpagina/oregon.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/oregon.png"></a>
         <p class="color">OREGAN</p>
         <p>Prijs: € 6,95</p>
-        <a href="productpagina/oregon.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/oregon.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -150,8 +178,8 @@
         <a href="productpagina/the_joker.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/joker.png"></a>
         <p class="color">THE JOKER</p>
         <p>Prijs: € 29,95</p>
-        <a href="productpagina/the_joker.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/the_joker.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -160,8 +188,8 @@
         <a href="productpagina/full-house.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/full-house.png"></a>
         <p class="color">FULL HOUSE</p>
         <p>Prijs: € 9,95</p>
-        <a href="productpagina/full-house.html" ><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/full-house.html" ><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -170,8 +198,8 @@
         <a href="productpagina/familie_trip.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/familie-trip.png"></a>
         <p class="color">FAMILIE TRIP</p>
         <p>Prijs: € 17,95</p>
-        <a href="productpagina/familie_trip.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/familie_trip.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -180,8 +208,8 @@
         <a href="productpagina/knock down.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/knock-down.png"></a>
         <p class="color">KNOCK DOWN</p>
         <p>Prijs: € 89,95</p>
-        <a href="productpagina/knock down.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/knock down.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -190,8 +218,8 @@
         <a href="productpagina/super-screamer.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/super-screamer.png"></a>
         <p class="color">SUPER SCREAMER!</p>
         <p>Prijs: € 7,50</p>
-        <a href="productpagina/super-screamer.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/super-screamer.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -200,8 +228,8 @@
         <a href="productpagina/happy-screamer.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/757-happy-screamer.png"></a>
         <p class="color">HAPPY SCREAMER</p>
         <p>Prijs: € 14,95</p>
-        <a href="productpagina/happy-screamer.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/happy-screamer.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -210,8 +238,8 @@
         <a href="productpagina/ultimate-screamer.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/ultimate-screamer.png"></a>
         <p class="color">ULTIMATE SCREAMER</p>
         <p>Prijs: € 39,95</p>
-        <a href="productpagina/ultimate-screamer.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/ultimate-screamer.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -220,8 +248,8 @@
         <a href="productpagina/thunder-pepper.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/thunder-pepper.png"></a>
         <p class="color">THUNDER PEPPER</p>
         <p>Prijs: € 4,95</p>
-        <a href="productpagina/thunder-pepper.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/thunder-pepper.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -230,8 +258,8 @@
         <a href="productpagina/defender-big-box.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/defender-big-box.png"></a>
         <p class="color">DEFENDER BIG BOX</p>
         <p>Prijs: € 19,95</p>
-        <a href="productpagina/defender-big-box.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/defender-big-box.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -240,8 +268,8 @@
         <a href="productpagina/assorted-volcano.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1205-assorted-volcano.png"></a>
         <p class="color">VOLCANO</p>
         <p>Prijs: € 8,50</p>
-        <a href="productpagina/assorted-volcano.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/assorted-volcano.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -250,8 +278,8 @@
         <a href="productpagina/mad-riot.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/mad-riot.png"></a>
         <p class="color">MAD RIOT</p>
         <p>Prijs: € 4,50</p>
-        <a href="productpagina/mad-riot.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/mad-riot.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -260,8 +288,8 @@
         <a href="productpagina/dragonfly.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1232-dragonfly.png"></a>
         <p class="color">DRAGONFLY</p>
         <p>Prijs: € 2,50g</p>
-        <a href="productpagina/dragonfly.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/dragonfly.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -270,8 +298,8 @@
         <a href="productpagina/mi-flai-haai.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/mi-flai-haai.png"></a>
         <p class="color">MI FLAI HAAI</p>
         <p>Prijs: € 2,95</p>
-        <a href="productpagina/mi-flai-haai.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/mi-flai-haai.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -280,8 +308,8 @@
         <a href="productpagina/jumping-jack.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1238-jumping-jack.png"></a>
         <p class="color">JUMPING JACK</p>
         <p>Prijs: € 1,50</p>
-        <a href="productpagina/jumping-jack.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/jumping-jack.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -290,8 +318,8 @@
         <a href="productpagina/crackling-ground-flowers.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/crackling-ground-flowers.png"></a>
         <p class="color">CRACKLING GROUND FLOWERS</p>
         <p>Prijs: € 3,70</p>
-        <a href="productpagina/crackling-ground-flowers.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/crackling-ground-flowers.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -300,8 +328,8 @@
         <a href="productpagina/burning-attack.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/burning-attack.png"></a>
         <p class="color">BURNING ATTACK</p>
         <p>Prijs: € 14,95</p>
-        <a href="productpagina/burning-attack.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/burning-attack.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -310,8 +338,8 @@
         <a href="productpagina/burning-string-90.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/burning-string-90.png"></a>
         <p class="color">BURNING STRING 90</p>
         <p>Prijs: € 1,20</p>
-        <a href="productpagina/burning-string-90.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/burning-string-90.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -320,8 +348,8 @@
         <a href="productpagina/burning-string-500.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/burning-string-500.png"></a>
         <p class="color">BURNING SHOTS 500</p>
         <p>Prijs: € 6,50</p>
-        <a href="productpagina/burning-string-500.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/burning-string-500.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -330,8 +358,8 @@
         <a href="productpagina/wolff-cracker.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1318-wolff-cracker.png"></a>
         <p class="color">WOLFF CRACKER</p>
         <p>Prijs: € 3,95</p>
-        <a href="productpagina/wolff-cracker.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/wolff-cracker.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -340,8 +368,8 @@
         <a href="productpagina/burning-king.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/burning-king.png"></a>
         <p class="color">BURNING KING</p>
         <p>Prijs: € 9,95</p>
-        <a href="productpagina/burning-king.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/burning-king.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -350,8 +378,8 @@
         <a href="productpagina/big-family-pack.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1386-big-family-pack.png"></a>
         <p class="color">BIG FAMILY PACK</p>
         <p>Prijs: € 37,50</p>
-        <a href="productpagina/big-family-pack.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/big-family-pack.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -360,8 +388,8 @@
         <a href="productpagina/city-lights.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/1655-city-lights.png"></a>
         <p class="color">CITY LIGHTS</p>
         <p>Prijs: € 27,50</p>
-        <a href="productpagina/city-lights.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/city-lights.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -370,8 +398,8 @@
         <a href="productpagina/heroes-fire-1.html" class="product-image"><img src="http://15982.hosts1.ma-cloud.nl/bewijzenmap/examen/pottenklein/heroes-fire-1.png"></a>
         <p class="color">HEROES ON FIRE 1</p>
         <p>Prijs: € 21,50</p>
-        <a href="productpagina/heroes-fire-1.html"><button>Meer info</button></a>
-        <button>In winkelwagen</button>
+        <a href="productpagina/heroes-fire-1.html"><button class="btn">Meer info</button></a>
+        <button class="btn">In winkelwagen</button>
     </div>
     </div>
 
@@ -423,6 +451,41 @@
             this.className += " active";
         });
     }
+
+    //Price filter
+    var lowerSlider = document.querySelector('#lower');
+    var  upperSlider = document.querySelector('#upper');
+
+    document.querySelector('#two').value=upperSlider.value;
+    document.querySelector('#one').value=lowerSlider.value;
+
+    var  lowerVal = parseInt(lowerSlider.value);
+    var upperVal = parseInt(upperSlider.value);
+
+    upperSlider.oninput = function () {
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+
+        if (upperVal < lowerVal + 4) {
+            lowerSlider.value = upperVal - 4;
+            if (lowerVal == lowerSlider.min) {
+            upperSlider.value = 4;
+            }
+        }
+        document.querySelector('#two').value=this.value
+    };
+
+    lowerSlider.oninput = function () {
+        lowerVal = parseInt(lowerSlider.value);
+        upperVal = parseInt(upperSlider.value);
+        if (lowerVal > upperVal - 4) {
+            upperSlider.value = lowerVal + 4;
+            if (upperVal == upperSlider.max) {
+                lowerSlider.value = parseInt(upperSlider.max) - 4;
+            }
+        }
+        document.querySelector('#one').value=this.value
+    }; 
 </script>
 
 <br>
