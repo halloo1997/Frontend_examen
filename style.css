@@ -5,7 +5,7 @@ html {
   overflow: auto
 }
 #contact .card:hover h4, #contact .card:hover i {
-  color: #87d37c
+  color: #87d37c;
 }
 body {
   margin-top: 0;
@@ -29,42 +29,41 @@ nav ul li a {
 nav ul li a:focus, nav ul li a:hover {
   color: #3d948c !important;
   text-decoration: underline !important;
-  text-decoration-color: #3d948c
+  text-decoration-color: #3d948c;
 }
 .active-nav-item * {
-  color: #3d948c !important
+  color: #3d948c !important;
 }
 .btn-outline-header {
   color: #3d948c;
   border-color: #3d948c
 }
 .btn-outline-header:hover {
-  background-color: #3d948c
+  background-color: #3d948c;
 }
 .row {
-  margin-top: 75px !important
+  margin-top: 75px !important;
 }
 .title {
-  color: #3d948c
+  color: #2e2e2e;
 }
 .title:focus, .title:hover {
   color: #3d948c !important;
   text-decoration: underline !important;
-  text-decoration-color: #3d948c
+  text-decoration-color: #3d948c;
 }
 .card-text {
-  color: gray
+  color: black;
 }
 .Naam {
   font-size: 1.5rem;
   background-image: url(jimmy-musto-iOWEyl7sEgY-unsplash.jpg);
   height: 300px;
-  width: 100%
+  width: 100%;
 }
 .Naam h1 {
   padding-top: 180px;
   color: #fff;
-  text-shadow: 2px 2px #000
 }
 .col-lg-16 {
   margin-top: -100px
@@ -117,7 +116,7 @@ i {
   min-height: 95vh
 }
 #projectPage {
-  background-color: #67809f
+  background-color: #67809f;
 }
 #grid {
   padding: 0 4.5em;
@@ -149,10 +148,10 @@ i {
   bottom: 0
 }
 [role=text] {
-  text-align: left
+  text-align: left;
 }
 .active {
-  background-color: #c0d9f8
+  background-color: #c0d9f8;
 }
 a.icon:link, a.icon:visited {
   padding: .75em .5em .25em .5em;
@@ -161,7 +160,7 @@ a.icon:link, a.icon:visited {
 a.icon:hover {
   padding: .75em .5em .25em .5em;
   color: #333;
-  background-color: #c0d9f8
+  background-color: #c0d9f8;
 }
 img.proj {
   filter: gray;
@@ -172,33 +171,33 @@ img.proj:hover {
   -webkit-filter: grayscale(0)
 }
 .btn-secondary:hover {
-  background-color: #c0d9f8
+  background-color: #c0d9f8;
 }
 @media (max-width:768px) {
   body {
-    font-size: 80%
+    font-size: 80%;
   }
   [role=downPage] {
-    display: none
+    display: none;
   }
 }
 @media (max-width:576px) {
   #contact {
-    text-align: center
+    text-align: center;
   }
   small {
-    display: none
+    display: none;
   }
   h1 {
-    padding-top: 30%
+    padding-top: 30%;
   }
 }
 @media (min-width:1920px) {
   body {
-    font-size: 120%
+    font-size: 120%;
   }
   h1 {
-    padding-top: 20%
+    padding-top: 20%;
   }
 }
 body {
@@ -206,7 +205,7 @@ body {
 }
 @media (min-width:1920px) {
   .Naam h1 {
-    padding-top: 25%
+    padding-top: 25%;
   }
 }
 .product-container {
@@ -223,49 +222,49 @@ body {
   height: 150px;
   display: inline-block;
   border: 1px solid #e4e4e4;
-  border-radius: 5px
+  border-radius: 5px;
 }
 .product-image img {
-  width: 100%
+  width: 100%;
 }
 .shopping-basket {
   background-color: #333;
   color: #fff;
-  padding: 10px
+  padding: 10px;
 }
 .fixed-top {
-  position: sticky
+  position: sticky;
 }
 .test {
-  transform: translate(250%)
+  transform: translate(250%);
 }
 @media (max-width:860px) {
   ul.navbar-nav {
-    transform: translate(100%)
+    transform: translate(100%);
   }
 }
 .filterDiv {
   float: left;
   color: #343a40;
   text-align: center;
-  display: none
+  display: none;
 }
 .show {
-  display: flex
+  display: flex;
 }
 .container {
   margin-top: 20px;
-  overflow: hidden
+  overflow: hidden;
 }
 .btn {
   border: none;
   outline: 0;
   margin-top: 4px;
   background-color: #f1f1f1;
-  cursor: pointer
+  cursor: pointer;
 }
 .btn:hover {
-  background-color: #ddd
+  background-color: #ddd !important;
 }
 .btn.active {
   background-color: #666;
@@ -276,7 +275,7 @@ body {
   color: red
 }
 .color {
-  color: #3d948c;
+  color: black;
   font-size: 1.2em
 }
 .breadcrumb-list > li {
@@ -458,7 +457,7 @@ body {
   border-color: #e96405
 }
 .btn, .btn--secondary, .rte .btn, .rte .btn--secondary {
-  background-color: #3d948c !important;
+  background-color: #000 !important;
   color: #fff
 }
 #ProductPhotoImg {
@@ -495,11 +494,11 @@ body {
 }
 .price-title {
   position: relative;
-  color: #fff;
+  color: white;
   font-size: 14px;
   line-height: 1.5em;
   font-weight: 400;
-  background: #3d948c;
+  background: black;
   border-radius: .25rem;
   padding: 10px;
   cursor: pointer
@@ -560,7 +559,7 @@ body {
   height: 10px;
   width: 10px;
   margin-top: -4px;
-  background-color: #3d948c;
+  background-color: black;
   pointer-events: all;
   z-index: 100
 }
@@ -574,7 +573,7 @@ body {
   height: 10px;
   width: 10px;
   margin-top: -5px;
-  background-color: #3d948c;
+  background-color: black;
   pointer-events: all;
   z-index: 100
 }
@@ -588,7 +587,7 @@ body {
   height: 10px;
   width: 10px;
   margin-top: -5px;
-  background-color: #3d948c;
+  background-color: black;
   pointer-events: all;
   z-index: 100
 }
@@ -596,21 +595,21 @@ body {
   width: 188px;
   height: 2px;
   cursor: pointer;
-  background: #3d948c;
+  background: black;
   border-radius: 5px
 }
 .price-field input[type=range]::-moz-range-track {
   width: 188px;
   height: 2px;
   cursor: pointer;
-  background: #3d948c;
+  background: black;
   border-radius: 5px
 }
 .price-field input[type=range]::-ms-track {
   width: 188px;
   height: 2px;
   cursor: pointer;
-  background: #3d948c;
+  background: black;
   border-radius: 5px
 }
 .price-wrap {
@@ -662,4 +661,18 @@ body {
 }
 .jumbotron {
   background-color: #fff
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.text-muted {
+    color: white !important;
+}
+
+.bg-light {
+    background-color: #333 !important;
 }
