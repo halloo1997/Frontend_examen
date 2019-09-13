@@ -127,64 +127,67 @@ King!</div>
                                                 <style>.product-variant-option .selector-wrapper{display: none;}</style>
                                                 <div class="product-add-to-cart">
 <div class="cart-plus-minus"> </div>
-                                                    <div class="add">
-                                                      <button type="submit" class="add-to-cart ajax-spin-cart" id="AddToCart">
-                                                            <i class="ion-bag"></i>
-                                                            <span class="list-cart-title cart-title" id="AddToCartText">Voeg toe aan winkelwagen</span>
-                                                        </button>
-                                                      <script>
-                                                            jQuery('#AddToCart').click(function(e) {
-                                                            e.preventDefault();
-                                                            Shopify.addItemFromFormStart('AddToCartForm', 1912078270534);
-                                                             }); 
-                                                        </script>
-
-                                                        <div class="single-product-wishlist"> </div>
-                                                    </div>
-                                              </div>
-                                                <div class="secure-payment"></div>                                                                  
-                                          </div>                                                        
-                                      </div>
-                                    </form> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <style type="text/css">.product-details .countdown-timer-wrapper{display: none !important;}</style>
+                                                   <div class="add">
+                                                    
+<a href="../winkel.html" class="add-to-cart ajax-spin-cart">Terug</a>
+                                                         
+<button type="submit" class="add-to-cart ajax-spin-cart" id="AddToCart">
+<span class="list-cart-title cart-title" id="AddToCartText">Voeg toe aan winkelwagen</span>
+</button>
+<script>
+jQuery('#AddToCart').click(function(e) {
+    e.preventDefault();
+    Shopify.addItemFromFormStart('AddToCartForm', 1912078270534);
+    }); <br>
+</script>
+ <div class="single-product-wishlist"> 
+ </div>
+</div>
+</div>
+<div class="secure-payment"></div>                                                                  
+</div>                                                        
+</div>
+                                    
+</form> 
+</div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">.product-details .countdown-timer-wrapper{display: none !important;}</style>
                                                 
         
-                <script>
-                    $('.product-thumbnail').owlCarousel({
-                        loop: true,
-                        center: true,
-                        nav: true,dots:false,
-                        margin:10,
-                        autoplay: false,
-                        autoplayTimeout: 5000,
-                        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                        item: 3,
-                        responsive: {
-                            0: {
-                                items: 2
-                            },
-                            480: {
-                                items: 3
-                            },
-                            992: {
-                                items: 3,
-                            },
-                            1170: {
-                                items: 3,
-                            },
-                            1200: {
-                                items: 3
-                            }
-                        }
-                    });
-                </script>
-            </div>
-        </main>
+<script>
+$('.product-thumbnail').owlCarousel({
+loop: true,
+center: true,
+nav: true,dots:false,
+margin:10,
+autoplay: false,
+autoplayTimeout: 5000,
+navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+item: 3,
+responsive: {
+0: {
+items: 2
+},
+480: {
+items: 3
+},
+992: {
+items: 3,
+},
+1170: {
+items: 3,
+},
+1200: {
+items: 3
+}
+}
+});
+</script>
+</div>
+</main>
     </div>
     </body>
     <footer class="bg-light py-5">
