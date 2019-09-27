@@ -180,8 +180,21 @@
         });
     }
 
+    function filterProducts() {
+      var valOne = parseInt(document.getElementById("lower").value);
+      var valTwo = parseInt(document.getElementById("upper").value);
 
-    var filterBtn = document.getElementById("filter");
-    filterBtn.addEventListener("click", function () {
-        console.log("hey");
-    });
+      var prices = document.getElementsByClassName("price");
+
+      for (var i = 0; i < prices.length; i++) {
+        let currentPrice = parseInt(prices[i].innerHTML);
+        let dadPrice = prices[i].parentNode;
+        let grandPa  = dadPrice.parentNode;
+
+        if (currentPrice < valOne || currentPrice > valTwo) {
+          grandPa.style.display = "none";
+        } else {
+          grandPa.style.display = "block";
+        }
+      }
+    }
