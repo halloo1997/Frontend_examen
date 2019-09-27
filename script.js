@@ -1,33 +1,33 @@
     filterSelection("all")
+
     function filterSelection(c) {
         var x, i;
         x = document.getElementsByClassName("filterDiv");
         if (c == "all") c = "";
-        for (i = 0; i < x.length; i++){
+        for (i = 0; i < x.length; i++) {
             w3RemoveClass(x[i], "show");
             if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
         }
     }
 
-    function w3AddClass(element,name) {
+    function w3AddClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
         for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[1])== -1)
-            {element.className += " " + arr2[i];}
+            if (arr1.indexOf(arr2[1]) == -1) {
+                element.className += " " + arr2[i];
+            }
         }
     }
 
-    function w3RemoveClass(element, name)
-    {
+    function w3RemoveClass(element, name) {
         var i, arr1, arr2;
         arr1 = element.className.split(" ");
         arr2 = name.split(" ");
         for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1)
-            {
-                arr1.splice(arr1.indexOf(arr2[i]),1);
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
             }
         }
         element.className = arr1.join(" ");
@@ -35,9 +35,8 @@
 
     var btnContainer = document.getElementById("myBtnContainer");
     var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++)
-    {
-        btns[i].addEventListener("click", function(){
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
             var current = document.getElementsByClassName("active");
             current[0].className = current[0].className.replace("active", "");
             this.className += " active";
@@ -46,12 +45,12 @@
 
     //Price filter
     var lowerSlider = document.querySelector('#lower');
-    var  upperSlider = document.querySelector('#upper');
+    var upperSlider = document.querySelector('#upper');
 
-    document.querySelector('#two').value=upperSlider.value;
-    document.querySelector('#one').value=lowerSlider.value;
+    document.querySelector('#two').value = upperSlider.value;
+    document.querySelector('#one').value = lowerSlider.value;
 
-    var  lowerVal = parseInt(lowerSlider.value);
+    var lowerVal = parseInt(lowerSlider.value);
     var upperVal = parseInt(upperSlider.value);
 
     upperSlider.oninput = function () {
@@ -61,10 +60,10 @@
         if (upperVal < lowerVal + 4) {
             lowerSlider.value = upperVal - 4;
             if (lowerVal == lowerSlider.min) {
-            upperSlider.value = 4;
+                upperSlider.value = 4;
             }
         }
-        document.querySelector('#two').value=this.value
+        document.querySelector('#two').value = this.value
     };
 
     lowerSlider.oninput = function () {
@@ -76,7 +75,7 @@
                 lowerSlider.value = parseInt(upperSlider.max) - 4;
             }
         }
-        document.querySelector('#one').value=this.value
+        document.querySelector('#one').value = this.value
     };
 
     function autocomplete(inp, arr) {
@@ -84,11 +83,13 @@
         the text field element and an array of possible autocompleted values:*/
         var currentFocus;
         /*execute a function when someone writes in the text field:*/
-        inp.addEventListener("input", function(e) {
+        inp.addEventListener("input", function (e) {
             var a, b, i, val = this.value;
             /*close any already open lists of autocompleted values*/
             closeAllLists();
-            if (!val) { return false;}
+            if (!val) {
+                return false;
+            }
             currentFocus = -1;
             /*create a DIV element that will contain the items (values):*/
             a = document.createElement("DIV");
@@ -108,7 +109,7 @@
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                     /*execute a function when someone clicks on the item value (DIV element):*/
-                    b.addEventListener("click", function(e) {
+                    b.addEventListener("click", function (e) {
                         /*insert the value for the autocomplete text field:*/
                         inp.value = this.getElementsByTagName("input")[0].value;
                         /*close the list of autocompleted values,
@@ -120,7 +121,7 @@
             }
         });
         /*execute a function presses a key on the keyboard:*/
-        inp.addEventListener("keydown", function(e) {
+        inp.addEventListener("keydown", function (e) {
             var x = document.getElementById(this.id + "autocomplete-list");
             if (x) x = x.getElementsByTagName("div");
             if (e.keyCode == 40) {
@@ -144,6 +145,7 @@
                 }
             }
         });
+
         function addActive(x) {
             /*a function to classify an item as "active":*/
             if (!x) return false;
@@ -154,12 +156,14 @@
             /*add class "autocomplete-active":*/
             x[currentFocus].classList.add("autocomplete-active");
         }
+
         function removeActive(x) {
             /*a function to remove the "active" class from all autocomplete items:*/
             for (var i = 0; i < x.length; i++) {
                 x[i].classList.remove("autocomplete-active");
             }
         }
+
         function closeAllLists(elmnt) {
             /*close all autocomplete lists in the document,
             except the one passed as an argument:*/
@@ -175,3 +179,9 @@
             closeAllLists(e.target);
         });
     }
+
+
+    var filterBtn = document.getElementById("filter");
+    filterBtn.addEventListener("click", function () {
+        console.log("hey");
+    });
